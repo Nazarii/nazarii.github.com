@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Nazarii Gudzovatyi]]></title>
+  <link href="http://Nazarii.github.io/atom.xml" rel="self"/>
+  <link href="http://Nazarii.github.io/"/>
+  <updated>2013-06-24T23:01:53+03:00</updated>
+  <id>http://Nazarii.github.io/</id>
+  <author>
+    <name><![CDATA[Nazarii]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[That's it! My first post.]]></title>
+    <link href="http://Nazarii.github.io/blog/2013/06/20/thats-it-my-first-post/"/>
+    <updated>2013-06-20T23:25:00+03:00</updated>
+    <id>http://Nazarii.github.io/blog/2013/06/20/thats-it-my-first-post</id>
+    <content type="html"><![CDATA[<p>So i decided to start my own blog with blackjack and hookers .<!-- more -->
+Will try to write about technical Tips&amp;Tricks that are interesting for me basicly in English (Please accept my apologies for my barbarian grammatic).
+The main goal of this blog is to keep things I&rsquo;m interested in in one place.</p>
+
+<p>If you found something interesting &ndash; try this out!</p>
+
+<p><img class="left" src="http://Nazarii.github.io/images/hookers.jpg" width="350" height="350" title="image" alt="images"></p>
+]]></content>
+  </entry>
+  
+</feed>
