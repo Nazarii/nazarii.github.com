@@ -6,7 +6,7 @@ comments: true
 categories: [GIT, Command line]
 ---
 
-Today I'd like to show with you really usefull tool for working in command line I've discovered - <a href="http://www.zsh.org/">ZSH</a>.
+Today I'd like to show you really usefull tool for working in command line I've discovered - <a href="http://www.zsh.org/">ZSH</a>.
 The Z Shell (<a href="http://www.zsh.org/">zsh</a>) is a power shell that is not often used by many Linux users. The reason for this is that most Linux distributions install, and make default, the bash shell.<!--more--> zsh is packaged for virtually every Linux distribution and installation on Ubuntu is simple made by running
 
 {% codeblock bash lang:bash%}
