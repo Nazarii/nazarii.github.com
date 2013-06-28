@@ -7,7 +7,7 @@ categories:
 ---
 So i decided to start my own blog with blackjack and hookers .<!-- more -->
 Will try to write about technical Tips&Tricks that are interesting for me basicly in English (Please accept my apologies for my barbarian grammatic).
-The main goal of this blog is to keep things I'm interested in in one place.
+The main goal of this blog is to keep things I'm interested in in one place and to improve my English conversantional skills.
 
 If you found something interesting - try this out!
 
