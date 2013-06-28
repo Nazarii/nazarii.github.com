@@ -4,7 +4,7 @@
   <title><![CDATA[Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-06-28T16:14:34+03:00</updated>
+  <updated>2013-06-28T18:47:45+03:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -18,7 +18,7 @@
     <link href="http://Nazarii.github.io/blog/2013/06/28/introducing-zsh-and-oh-my-zsh/"/>
     <updated>2013-06-28T14:28:00+03:00</updated>
     <id>http://Nazarii.github.io/blog/2013/06/28/introducing-zsh-and-oh-my-zsh</id>
-    <content type="html"><![CDATA[<p>Today I&rsquo;d like to show with you really usefull tool for working in command line I&rsquo;ve discovered &ndash; <a href="http://www.zsh.org/">ZSH</a>.
+    <content type="html"><![CDATA[<p>Today I&rsquo;d like to show you really usefull tool for working in command line I&rsquo;ve discovered &ndash; <a href="http://www.zsh.org/">ZSH</a>.
 The Z Shell (<a href="http://www.zsh.org/">zsh</a>) is a power shell that is not often used by many Linux users. The reason for this is that most Linux distributions install, and make default, the bash shell.<!--more--> zsh is packaged for virtually every Linux distribution and installation on Ubuntu is simple made by running</p>
 
 <figure class='code'><figcaption><span>bash</span></figcaption>
