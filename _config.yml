@@ -64,7 +64,7 @@ default_asides: [custom/asides/chuck_norris.html, asides/github.html, asides/del
 
 # Github repositories
 github_user: Nazarii
-github_repo_count: 0
+github_repo_count: 3
 github_show_profile_link: true
 github_skip_forks: true
 

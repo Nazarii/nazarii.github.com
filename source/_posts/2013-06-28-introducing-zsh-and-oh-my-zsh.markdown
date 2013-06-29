@@ -3,7 +3,7 @@ layout: post
 title: "Introducing ZSH."
 date: 2013-06-28 14:28
 comments: true
-categories: [GIT, Command line]
+categories: [GIT, Linux]
 ---
 
 Today I'd like to show you really usefull tool for working in command line I've discovered - <a href="http://www.zsh.org/">ZSH</a>.
