@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Nazarii Gudzovatyi]]></title>
+  <link href="http://Nazarii.github.io/atom.xml" rel="self"/>
+  <link href="http://Nazarii.github.io/"/>
+  <updated>2013-06-30T00:13:31+03:00</updated>
+  <id>http://Nazarii.github.io/</id>
+  <author>
+    <name><![CDATA[Nazarii]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Calculating working days with python.]]></title>
+    <link href="http://Nazarii.github.io/blog/2013/06/29/calculating-working-days-with-python/"/>
+    <updated>2013-06-29T21:15:00+03:00</updated>
+    <id>http://Nazarii.github.io/blog/2013/06/29/calculating-working-days-with-python</id>
+    <content type="html"><![CDATA[<p>So the specification is following:</p>
+
+<blockquote><p>We need to calculate number of working days between two dates - it mean&#8217;s we need to calculate all days excluding Saturday and Sunday. If the function is running after 6:00 pm this working day need to be also excluded.</p></blockquote>
+
+
+<!-- more -->
+
+
+<p>After some googling I&rsquo;ve found this task could be resolved using rrule module.
+Be sure you have <a href="http://labix.org/python-dateutil">dateutil</a> library installed to use this example.</p>
+
+<figure class='code'><figcaption><span>sublime-text</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">time</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">dateutil</span> <span class="kn">import</span> <span class="n">rrule</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_working_days</span><span class="p">(</span><span class="n">date_start_obj</span><span class="p">,</span> <span class="n">date_end_obj</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">weekdays</span> <span class="o">=</span> <span class="n">rrule</span><span class="o">.</span><span class="n">rrule</span><span class="p">(</span><span class="n">rrule</span><span class="o">.</span><span class="n">DAILY</span><span class="p">,</span> <span class="n">byweekday</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">dtstart</span><span class="o">=</span><span class="n">date_start_obj</span><span class="p">,</span> <span class="n">until</span><span class="o">=</span><span class="n">date_end_obj</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">weekdays</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">weekdays</span><span class="p">))</span>
+</span><span class='line'>    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&#39;%H&#39;</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">weekdays</span> <span class="o">-=</span> <span class="mi">1</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">weekdays</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here byweekday parameter is a list of days of week we want to caculate, ti&rsquo;s elements can be integers (Monday is 0, Tuesday is 1 etc) or rrule objects &ndash; rrule.MO, rrule.TU etc. Other usefull methods for date (e.g. full weeks) calculations could be found <a href="http://labix.org/python-dateutil">here</a>.</p>
+
+<p>Suppose we need to calculate days from 1-01-2013 until 28-07-2013.
+Our code will be:</p>
+
+<figure class='code'><figcaption><span>sublime-text</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">date_start_obj</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'><span class="n">date_end_obj</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+</span><span class='line'><span class="k">print</span> <span class="n">get_working_days</span><span class="p">(</span><span class="n">date_start_obj</span><span class="p">,</span> <span class="n">date_end_obj</span><span class="p">):</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The output wil be: <strong>142</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Few SSH productivity tips for newbies.]]></title>
+    <link href="http://Nazarii.github.io/blog/2013/06/29/basic-ssh-productivity-tips/"/>
+    <updated>2013-06-29T18:22:00+03:00</updated>
+    <id>http://Nazarii.github.io/blog/2013/06/29/basic-ssh-productivity-tips</id>
+    <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Secure_Shell">SSH</a> has many features which are helpful when working regularly with files on remote servers, together they can give a vast increase in productivity over the bare use of <a href="http://en.wikipedia.org/wiki/Secure_Shell">ssh</a>. If you regularly use <a href="http://en.wikipedia.org/wiki/Secure_Shell">ssh</a>, it’s worth spending a little time learning about these and configuring your environment to make your life easier.<!-- more -->
+I&rsquo;m working with ssh over a year and here are few tips to make this work easier when connecting to remote server.</p>
+
+<h2>Too lazy to type password?</h2>
+
+<p>If currently you type a password when making an SSH connection, you can make connecting much more pleasant by setting up SSH keys. With keys you do get prompted for a pass phrase, but this happens only once per booting your computer, rather than on every connection. With OpenSSH generate yourself a private key with:</p>
+
+<figure class='code'><figcaption><span>zsh</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>ssh-keygen
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and follow the prompts. Do provide a pass phrase, so your private key is encrypted on disk. Then you need to copy the public part of your key to servers you wish to connect to. If your system has ssh-copy-id then it’s as simple as:</p>
+
+<figure class='code'><figcaption><span>zsh</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>ssh-copy-id username@example.org
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Otherwise you need to do it manually:</p>
+
+<p><em>1. Find the public key. The output of ssh-keygen should say where this is, probably ~/.ssh/id_rsa.pub.</em></p>
+
+<p><em>2. On each of your remote servers insert the contents of that file into ~/.ssh/authorized_keys.</em></p>
+
+<p><em>3. Make sure that only your user can write to both the directory and file.</em></p>
+
+<p>Then you can SSH to servers, copy files, and commit code all without being hassled for passwords.</p>
+
+<h2>Too lazy to type full hostnames?</h2>
+
+<p>If you&rsquo;re tired of typing same username and server address follow these tips:</p>
+
+<h3>Hostname Aliases</h3>
+
+<p>You can define hostname aliases in your SSH config, which is usually located in ~/.ssh/config though this can involve listing each hostname. For example:</p>
+
+<figure class='code'><figcaption><span>vim</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'>Host dev
+</span><span class='line'>  HostName dev.example.<span class="k">com</span>
+</span><span class='line'>  Port <span class="m">1422</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can even use wildcards to group similar hostnames, using %h in the fully qualified domain name:</p>
+
+<figure class='code'><figcaption><span>vim</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'>Host dev intranet <span class="nb">backup</span>
+</span><span class='line'>  HostName %<span class="k">h</span>.example.<span class="k">com</span>
+</span><span class='line'>
+</span><span class='line'>Host dev mail
+</span><span class='line'>  HostName %<span class="k">h</span>.example.<span class="k">com</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next time you type <strong>ssh dev</strong> it will connect to <strong>dev.example.com</strong>.</p>
+
+<h3>Don’t Type Usernames</h3>
+
+<p>If your username on a remote server is different from your local username, and when you often connect with the same user specify this in your SSH config as well:</p>
+
+<figure class='code'><figcaption><span>vim</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'>Host dev mail
+</span><span class='line'>  HostName %<span class="k">h</span>.example.<span class="k">com</span>
+</span><span class='line'>  <span class="nb">User</span> nazik
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now even though my local username is nazarii, I can just do:</p>
+
+<figure class='code'><figcaption><span>zsh</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>ssh dev
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and SSH will connect to the nazik account on the server.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing ZSH.]]></title>
+    <link href="http://Nazarii.github.io/blog/2013/06/28/introducing-zsh-and-oh-my-zsh/"/>
+    <updated>2013-06-28T14:28:00+03:00</updated>
+    <id>http://Nazarii.github.io/blog/2013/06/28/introducing-zsh-and-oh-my-zsh</id>
+    <content type="html"><![CDATA[<p>Today I&rsquo;d like to show you really usefull tool for working in command line I&rsquo;ve discovered &ndash; <a href="http://www.zsh.org/">ZSH</a>.
+The Z Shell (<a href="http://www.zsh.org/">zsh</a>) is a power shell that is not often used by many Linux users. The reason for this is that most Linux distributions install, and make default, the bash shell.<!--more--> zsh is packaged for virtually every Linux distribution and installation on Ubuntu is simple made by running</p>
+
+<figure class='code'><figcaption><span>bash</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$sudo</span> apt-get install zsh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After installation main configuration file .zshrc is located in you&#8217;r home directory.
+To make zsh as default shell run chsh command and include path to it&rsquo;s executable:</p>
+
+<figure class='code'><figcaption><span>bash</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nazik@nazik-HP:~<span class="nv">$ </span>chsh
+</span><span class='line'>Password:
+</span><span class='line'>Changing the login shell <span class="k">for </span>nazik
+</span><span class='line'>Enter the new value, or press ENTER <span class="k">for </span>the default
+</span><span class='line'>    Login Shell <span class="o">[</span>/bin/bash<span class="o">]</span>: /bin/zsh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>One of the great features of zsh is tab-completion; it also handles all the logistics of tab-completion and is extremely easy to implement, just by adding two lines to your ~/.zshrc file:</p>
+
+<figure class='code'><figcaption><span>zsh</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>autoload -U compinit
+</span><span class='line'>compinit
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The compinit function is what loads the tab-completion system by defining a shell function for every utility that zsh is able to tab-complete. By using autoload, you can optimize zsh by telling it to defer reading the definition of the function until it&rsquo;s actually used, which speeds up the zsh startup time and reduces memory usage.</p>
+
+<p>Also there is awesome plugin <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a> especially if you are often working with <a href="http://en.wikipedia.org/wiki/Git_(software)">GIT</a> repositories.
+To install this one run:</p>
+
+<figure class='code'><figcaption><span>zsh</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$wget</span> --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After installation you might need to reload you shell:</p>
+
+<figure class='code'><figcaption><span>zsh</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">source</span> ~/.zshrc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Each time you cd to you git repo it will show you branch you currently working on and whether you have uncommited local changes or not, if so it will show you gold sign:
+<img class="center" src="http://Nazarii.github.io/images/zsh_screen.png" width="950" height="650" title="image" alt="images">
+Also there are a lot of themes for this plugin you can choose to use the other one then default &ldquo;robbyrussell&rdquo; theme. List of themes you can get at this <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes">link</a>. To change to other one you need to edit you .zshrc file and reload shell.</p>
+
+<p>You can also use aliases after adding it to your config file.
+To add time of command prompting to the right side of terminal append following line to your config file:</p>
+
+<figure class='code'><figcaption><span>vim </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RPROMPT=$'%{\e[1;34m%}%T%{\e[0m%}'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[That's it! My first post.]]></title>
+    <link href="http://Nazarii.github.io/blog/2013/06/20/thats-it-my-first-post/"/>
+    <updated>2013-06-20T23:25:00+03:00</updated>
+    <id>http://Nazarii.github.io/blog/2013/06/20/thats-it-my-first-post</id>
+    <content type="html"><![CDATA[<p>So i decided to start my own blog with blackjack and hookers .<!-- more -->
+Will try to write about technical Tips&amp;Tricks that are interesting for me basicly in English (Please accept my apologies for my barbarian grammatic).
+The main goal of this blog is to keep things I&rsquo;m interested in in one place and to improve my English conversantional skills.</p>
+
+<p>If you found something interesting &ndash; try this out!</p>
+
+<p><img class="left" src="http://Nazarii.github.io/images/hookers.jpg" width="350" height="350" title="image" alt="images"></p>
+]]></content>
+  </entry>
+  
+</feed>
