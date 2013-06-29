@@ -4,7 +4,7 @@
   <title><![CDATA[Category: GIT | Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-06-29T22:09:49+03:00</updated>
+  <updated>2013-06-30T00:35:18+03:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -21,55 +21,70 @@
     <content type="html"><![CDATA[<p>Today I&rsquo;d like to show you really usefull tool for working in command line I&rsquo;ve discovered &ndash; <a href="http://www.zsh.org/">ZSH</a>.
 The Z Shell (<a href="http://www.zsh.org/">zsh</a>) is a power shell that is not often used by many Linux users. The reason for this is that most Linux distributions install, and make default, the bash shell.<!--more--> zsh is packaged for virtually every Linux distribution and installation on Ubuntu is simple made by running</p>
 
-<p>{% codeblock bash lang:bash%}
-$sudo apt-get install zsh
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bash</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$sudo</span> apt-get install zsh
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>After installation main configuration file .zshrc is located in you'r home directory.
 To make zsh as default shell run chsh command and include path to it&rsquo;s executable:</p>
 
-<p>{% codeblock bash lang:bash%}
-nazik@nazik-HP:~$ chsh
-Password:
-Changing the login shell for nazik
-Enter the new value, or press ENTER for the default</p>
-
-<pre><code>Login Shell [/bin/bash]: /bin/zsh
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bash</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nazik@nazik-HP:~<span class="nv">$ </span>chsh
+</span><span class='line'>Password:
+</span><span class='line'>Changing the login shell <span class="k">for </span>nazik
+</span><span class='line'>Enter the new value, or press ENTER <span class="k">for </span>the default&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;pre&gt;&lt;code&gt;Login Shell <span class="o">[</span>/bin/bash<span class="o">]</span>: /bin/zsh
+</span><span class='line'>&lt;/code&gt;&lt;/pre&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>One of the great features of zsh is tab-completion; it also handles all the logistics of tab-completion and is extremely easy to implement, just by adding two lines to your ~/.zshrc file:</p>
 
-<p>{% codeblock zsh lang:bash%}
-autoload -U compinit
-compinit
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>zsh</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>autoload -U compinit
+</span><span class='line'>compinit
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>The compinit function is what loads the tab-completion system by defining a shell function for every utility that zsh is able to tab-complete. By using autoload, you can optimize zsh by telling it to defer reading the definition of the function until it&rsquo;s actually used, which speeds up the zsh startup time and reduces memory usage.</p>
 
 <p>Also there is awesome plugin <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a> especially if you are often working with <a href="http://en.wikipedia.org/wiki/Git_(software)">GIT</a> repositories.
 To install this one run:</p>
 
-<p>{% codeblock zsh lang:bash%}
-$wget &mdash;no-check-certificate <a href="https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh">https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh</a> -O &ndash; | sh
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>zsh</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$wget</span> &amp;mdash;no-check-certificate &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh&quot;</span>&gt;https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh&lt;/a&gt; -O &amp;ndash; | sh
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>After installation you might need to reload you shell:</p>
 
-<p>{% codeblock zsh lang:bash%}
-source ~/.zshrc
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>zsh</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">source</span> ~/.zshrc
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Each time you cd to you git repo it will show you branch you currently working on and whether you have uncommited local changes or not, if so it will show you gold sign:
-{% img center /images/zsh_screen.png 950 650 &lsquo;image&rsquo; &lsquo;images&rsquo; %}
+<img class="center" src="/images/zsh_screen.png" width="950" height="650" title="&lsquo;image&rsquo; &lsquo;images&rsquo;" >
 Also there are a lot of themes for this plugin you can choose to use the other one then default &ldquo;robbyrussell&rdquo; theme. List of themes you can get at this <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes">link</a>. To change to other one you need to edit you .zshrc file and reload shell.</p>
 
 <p>You can also use aliases after adding it to your config file.
 To add time of command prompting to the right side of terminal append following line to your config file:
-{% codeblock vim %}
-RPROMPT=$&lsquo;%{\e[1;34m%}%T%{\e[0m%}&rsquo;
-{% endcodeblock %}.</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>vim </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RPROMPT=$&lsquo;%{\e[1;34m%}%T%{\e[0m%}&rsquo;</span></code></pre></td></tr></table></div></figure></notextile></div>.</p>
 ]]></content>
   </entry>
   
