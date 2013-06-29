@@ -4,7 +4,7 @@
   <title><![CDATA[Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-06-30T00:44:42+03:00</updated>
+  <updated>2013-06-30T00:50:23+03:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[TEST]]></title>
+    <link href="http://Nazarii.github.io/blog/2013/06/30/test/"/>
+    <updated>2013-06-30T00:50:00+03:00</updated>
+    <id>http://Nazarii.github.io/blog/2013/06/30/test</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Calculating working days with python.]]></title>
