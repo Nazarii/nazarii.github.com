@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-06-30T00:50:23+03:00</updated>
+  <updated>2013-06-30T00:52:25+03:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -33,7 +33,7 @@ I&rsquo;m working with ssh over a year and here are few tips to make this work e
 <p>and follow the prompts. Do provide a pass phrase, so your private key is encrypted on disk. Then you need to copy the public part of your key to servers you wish to connect to. If your system has ssh-copy-id then it’s as simple as:
 <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>zsh</span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>ssh-copy-id &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#111;&amp;#58;&amp;#x75;&amp;#115;&amp;#x65;&amp;#x72;&amp;#110;&amp;#97;&amp;#x6d;&amp;#101;&amp;#x40;&amp;#x65;&amp;#x78;&amp;#97;&amp;#109;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#x2e;&amp;#x6f;&amp;#x72;&amp;#x67;&quot;</span>&gt;&amp;#x75;&amp;#115;&amp;#101;&amp;#x72;&amp;#x6e;&amp;#97;&amp;#109;&amp;#101;&amp;#x40;&amp;#x65;&amp;#120;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#x6f;&amp;#114;&amp;#x67;&lt;/a&gt;
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>ssh-copy-id &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#117;&amp;#115;&amp;#x65;&amp;#x72;&amp;#x6e;&amp;#97;&amp;#x6d;&amp;#x65;&amp;#64;&amp;#x65;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#101;&amp;#x2e;&amp;#111;&amp;#x72;&amp;#x67;&quot;</span>&gt;&amp;#117;&amp;#x73;&amp;#101;&amp;#114;&amp;#110;&amp;#x61;&amp;#x6d;&amp;#101;&amp;#x40;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#x6f;&amp;#114;&amp;#103;&lt;/a&gt;
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 Otherwise you need to do it manually:</p>
 
