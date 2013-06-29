@@ -35,4 +35,4 @@ date_start_obj = date(2013, 1, 1)
 date_end_obj = date(2013, 7, 18)
 print get_working_days(date_start_obj, date_end_obj):
 {% endcodeblock %}
-The output wil be: **142**
+The output will be: **142** (Calculate yourself if don't trust me).
