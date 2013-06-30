@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "contacts"
-date: 2013-06-30 15:18
 comments: false
 sharing: false
 footer: false
