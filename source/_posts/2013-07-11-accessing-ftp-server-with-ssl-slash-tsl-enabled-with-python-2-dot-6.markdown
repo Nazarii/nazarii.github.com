@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Accessing ftp server with SSL/TSL enabled using python 2.6"
+title: "Accessing ftp server with SSL/TLS enabled using python 2.6"
 date: 2013-07-11 22:06
 comments: true
-categories: 
+categories: Python
 ---
 
 Just want to provide a solution of problem I've faced, maybe it will be usefull for someone.
@@ -34,7 +34,7 @@ def get_data(host, username, passwd, directory_path='/'):
 {% endcodeblock %}
 
 Code was working nicely untill one moment i get exception <i><font color="red">530 SSL required</font></i>.
-The deal is because of user configuration on remote server, it is set to reguire [SSL/TLS](http://en.wikipedia.org/wiki/Transport_Layer_Security) encryption. But standard ftplib in my version of python 2.6.5 doesn't provide solution to connect with SSL/TLS, it was added in python 2.7. Version update looks bad, external libraries i also dont want to use. So i decided to get ftplib module from 2.7 version and use in my code.**(Download [2.7 version](http://www.python.org/download/releases/2.7/) and locate ftplib.py file)** After replacing standard ftplib file in you pythonpath with one frpm 2.7 out code looks like:
+The deal is because of user configuration on remote server, it is set to reguire [SSL/TLS](http://en.wikipedia.org/wiki/Transport_Layer_Security) encryption. But standard ftplib in my version of python 2.6.5 doesn't provide solution to connect with SSL/TLS, it was added in python 2.7. Version update looks bad, external libraries i also dont want to use. So i decided to get ftplib module from 2.7 version and use in my code.**(Download [2.7 version](http://www.python.org/download/releases/2.7/) and locate ftplib.py file)** After replacing standard ftplib file in you pythonpath with one from 2.7 our code looks like:
 {% codeblock sublime-text lang:python%}
 from ftplib import FTP_TLS
 import os
