@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python | Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-07-11T23:11:17+03:00</updated>
+  <updated>2013-07-11T23:14:07+03:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -70,7 +70,7 @@ Issue is next:
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Code was working nicely untill one moment i get exception <i><font color="red">530 SSL required</font></i>.
-The deal is because of user configuration on remote server, it is set to reguire <a href="http://en.wikipedia.org/wiki/Transport_Layer_Security">SSL/TLS</a> encryption. But standard ftplib in my version of python 2.6.5 doesn&rsquo;t provide solution to connect with SSL/TLS, it was added in python 2.7. Version update looks bad, external libraries i also dont want to use. So i decided to get ftplib module from 2.7 version and use in my code.<strong>(Download <a href="http://www.python.org/download/releases/2.7/">2.7 version</a> and locate ftplib.py file)</strong> After replacing standard ftplib file in you pythonpath with one frpm 2.7 out code looks like:
+The deal is because of user configuration on remote server, it is set to reguire <a href="http://en.wikipedia.org/wiki/Transport_Layer_Security">SSL/TLS</a> encryption. But standard ftplib in my version of python 2.6.5 doesn&rsquo;t provide solution to connect with SSL/TLS, it was added in python 2.7. Version update looks bad, external libraries i also dont want to use. So i decided to get ftplib module from 2.7 version and use in my code.<strong>(Download <a href="http://www.python.org/download/releases/2.7/">2.7 version</a> and locate ftplib.py file)</strong> After replacing standard ftplib file in you pythonpath with one from 2.7 our code looks like:
 <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>sublime-text</span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
