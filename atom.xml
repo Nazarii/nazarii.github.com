@@ -4,7 +4,7 @@
   <title><![CDATA[Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-07-11T23:14:07+03:00</updated>
+  <updated>2013-07-11T23:16:08+03:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Accessing ftp server with SSL/TSL enabled using python 2.6]]></title>
+    <title type="html"><![CDATA[Accessing ftp server with SSL/TLS enabled using python 2.6]]></title>
     <link href="http://Nazarii.github.io/blog/2013/07/11/accessing-ftp-server-with-ssl-slash-tsl-enabled-with-python-2-dot-6/"/>
     <updated>2013-07-11T22:06:00+03:00</updated>
     <id>http://Nazarii.github.io/blog/2013/07/11/accessing-ftp-server-with-ssl-slash-tsl-enabled-with-python-2-dot-6</id>
