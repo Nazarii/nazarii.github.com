@@ -48,6 +48,7 @@ def get_data(host, username, passwd, directory_path='/'):
     for filename in filenames:
         file_path = os.path.join(directory_path, file_counter)
         with open(file_path, 'wb') as output_file:
+            connection.retrbinary('RETR %s' % filename, lambda data: output_file.write(data))
             output_file.close()
             connection.delete(filename)
             counter += 1
