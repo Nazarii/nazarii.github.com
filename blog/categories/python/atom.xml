@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python | Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-07-15T23:17:29+03:00</updated>
+  <updated>2013-07-28T22:43:13+03:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Python: starting http server in one command]]></title>
+    <link href="http://Nazarii.github.io/blog/2013/07/28/python-starting-http-server-in-one-command/"/>
+    <updated>2013-07-28T22:21:00+03:00</updated>
+    <id>http://Nazarii.github.io/blog/2013/07/28/python-starting-http-server-in-one-command</id>
+    <content type="html"><![CDATA[<p>The idea is taken from it&rsquo;s own post on <a href="http://habrahabr.ru/post/118460/">habrahabr</a>.<!-- more -->
+We need to share 2GB file throw our local network
+and the quickest and simpliest way by advice of our <a href="http://www.linkedin.com/profile/view?id=98165358&amp;authType=name&amp;authToken=oGVS&amp;goback=">Joda</a> was to start local http server with the help of Python. To do it simply type in console:
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bash</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>python -m CGIHTTPServer
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+This will start http server on default 8000 port and after opening you browser on <strong><a href="http://localhost:8000">http://localhost:8000</a></strong> you should see a list of files in directory you prompted command from. Copy link address of file you need to and share with other members of you network. Enjoy fast download speed with python!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Accessing ftp server with SSL/TLS enabled using python 2.6]]></title>
