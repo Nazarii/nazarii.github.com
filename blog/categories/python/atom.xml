@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python | Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-07-28T22:43:13+03:00</updated>
+  <updated>2013-07-28T22:47:11+03:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -21,10 +21,9 @@
     <content type="html"><![CDATA[<p>The idea is taken from it&rsquo;s own post on <a href="http://habrahabr.ru/post/118460/">habrahabr</a>.<!-- more -->
 We need to share 2GB file throw our local network
 and the quickest and simpliest way by advice of our <a href="http://www.linkedin.com/profile/view?id=98165358&amp;authType=name&amp;authToken=oGVS&amp;goback=">Joda</a> was to start local http server with the help of Python. To do it simply type in console:
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bash</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>python -m CGIHTTPServer
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+{% codeblock bash lang:bash%}
+python -m CGIHTTPServer
+{% endcodeblock %}
 This will start http server on default 8000 port and after opening you browser on <strong><a href="http://localhost:8000">http://localhost:8000</a></strong> you should see a list of files in directory you prompted command from. Copy link address of file you need to and share with other members of you network. Enjoy fast download speed with python!</p>
 ]]></content>
   </entry>
@@ -36,101 +35,60 @@ This will start http server on default 8000 port and after opening you browser o
     <id>http://Nazarii.github.io/blog/2013/07/11/accessing-ftp-server-with-ssl-slash-tsl-enabled-with-python-2-dot-6</id>
     <content type="html"><![CDATA[<p>Just want to provide a solution of problem I&rsquo;ve faced, maybe it will be usefull for someone.
 Issue is next:
-<blockquote><p>We need to connect to remote ftp server, download and delete existing files.</p></blockquote></p>
+{% blockquote %}
+We need to connect to remote ftp server, download and delete existing files.
+{% endblockquote %}</p>
 
 <!-- more -->
 
 
 <p>Look&rsquo;s easy, let&rsquo;s use standard library <a href="http://docs.python.org/2/library/ftplib.html">ftplib</a>:
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>sublime-text</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">ftplib</span> <span class="kn">import</span> <span class="n">FTP</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">os</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">passwd</span><span class="p">,</span> <span class="n">directory_path</span><span class="o">=&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/&amp;</span><span class="n">rsquo</span><span class="p">;):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">connection</span> <span class="o">=</span> <span class="n">FTP</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">passwd</span><span class="o">=</span><span class="n">passwd</span><span class="p">)</span>
-</span><span class='line'><span class="n">filenames</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">nlst</span><span class="p">()</span>
-</span><span class='line'><span class="n">file_counter</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class='line'><span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
-</span><span class='line'>    <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory_path</span><span class="p">,</span> <span class="n">file_counter</span><span class="p">)</span>  <span class="c"># Supposed you use Postfix os, on windows locations would be different</span>
-</span><span class='line'>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">output_file</span><span class="p">:</span>
-</span><span class='line'>        <span class="n">connection</span><span class="o">.</span><span class="n">retrbinary</span><span class="p">(</span><span class="s">&#39;RETR </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">filename</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">data</span><span class="p">:</span> <span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
-</span><span class='line'>        <span class="n">output_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span><span class='line'>        <span class="n">connection</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-</span><span class='line'>        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
-</span><span class='line'><span class="n">connection</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
-</span><span class='line'><span class="k">return</span> <span class="bp">True</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+{% codeblock sublime-text lang:python%}
+from ftplib import FTP
+import os</p>
+
+<p>def get_data(host, username, passwd, directory_path=&lsquo;/&rsquo;):</p>
+
+<pre><code>connection = FTP(host=host, user=username, passwd=passwd)
+filenames = connection.nlst()
+file_counter = 1
+for filename in filenames:
+    file_path = os.path.join(directory_path, file_counter)  # Supposed you use Postfix os, on windows locations would be different
+    with open(file_path, 'wb') as output_file:
+        connection.retrbinary('RETR %s' % filename, lambda data: output_file.write(data))
+        output_file.close()
+        connection.delete(filename)
+        counter += 1
+connection.quit()
+return True
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>Code was working nicely untill one moment i get exception <i><font color="red">530 SSL required</font></i>.
 The deal is because of user configuration on remote server, it is set to reguire <a href="http://en.wikipedia.org/wiki/Transport_Layer_Security">SSL/TLS</a> encryption. But standard ftplib in my version of python 2.6.5 doesn&rsquo;t provide solution to connect with SSL/TLS, it was added in python 2.7. Version update looks bad, external libraries i also dont want to use. So i decided to get ftplib module from 2.7 version and use in my code.<strong>(Download <a href="http://www.python.org/download/releases/2.7/">2.7 version</a> and locate ftplib.py file)</strong> After replacing standard ftplib file in you pythonpath with one from 2.7 our code looks like:
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>sublime-text</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">ftplib</span> <span class="kn">import</span> <span class="n">FTP_TLS</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">os</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">passwd</span><span class="p">,</span> <span class="n">directory_path</span><span class="o">=&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/&amp;</span><span class="n">rsquo</span><span class="p">;):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">connection</span> <span class="o">=</span> <span class="n">FTP_TLS</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">config_obj</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">config_obj</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="n">passwd</span><span class="o">=</span><span class="n">config_obj</span><span class="o">.</span><span class="n">passwd</span><span class="p">)</span>
-</span><span class='line'><span class="n">connection</span><span class="o">.</span><span class="n">prot_p</span><span class="p">()</span>
-</span><span class='line'><span class="n">filenames</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">nlst</span><span class="p">()</span>
-</span><span class='line'><span class="n">file_counter</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class='line'><span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
-</span><span class='line'>    <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory_path</span><span class="p">,</span> <span class="n">file_counter</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">output_file</span><span class="p">:</span>
-</span><span class='line'>        <span class="n">connection</span><span class="o">.</span><span class="n">retrbinary</span><span class="p">(</span><span class="s">&#39;RETR </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">filename</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">data</span><span class="p">:</span> <span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
-</span><span class='line'>        <span class="n">output_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span><span class='line'>        <span class="n">connection</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-</span><span class='line'>        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
-</span><span class='line'><span class="n">connection</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
-</span><span class='line'><span class="k">return</span> <span class="bp">True</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+{% codeblock sublime-text lang:python%}
+from ftplib import FTP_TLS
+import os</p>
+
+<p>def get_data(host, username, passwd, directory_path=&lsquo;/&rsquo;):</p>
+
+<pre><code>connection = FTP_TLS(host=config_obj.host, user=config_obj.username, passwd=config_obj.passwd)
+connection.prot_p()
+filenames = connection.nlst()
+file_counter = 1
+for filename in filenames:
+    file_path = os.path.join(directory_path, file_counter)
+    with open(file_path, 'wb') as output_file:
+        connection.retrbinary('RETR %s' % filename, lambda data: output_file.write(data))
+        output_file.close()
+        connection.delete(filename)
+        counter += 1
+connection.quit()
+return True
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p><em>Also I want to notice if you do not want to break anything with further using ftplib library after replacing, my suggestion is to not replace files but to use file as separate module(e.g. if you run code from your own package copy downloaded file in it and include in <strong><strong>init</strong>.py</strong>, the in code where you want to use it import like <strong>from &lt;your_module_name> import ftplib as ftplib2.7</strong>).</em></p>
 ]]></content>
@@ -142,57 +100,40 @@ The deal is because of user configuration on remote server, it is set to reguire
     <updated>2013-06-29T21:15:00+03:00</updated>
     <id>http://Nazarii.github.io/blog/2013/06/29/calculating-working-days-with-python</id>
     <content type="html"><![CDATA[<p>So the specification is following:
-<blockquote><p>We need to calculate number of working days between two dates &ndash; it mean&rsquo;s we need to calculate all days excluding Saturday and Sunday. If the function is running after 6:00 pm this working day need to be also excluded.</p></blockquote></p>
+{% blockquote %}
+We need to calculate number of working days between two dates &ndash; it mean&rsquo;s we need to calculate all days excluding Saturday and Sunday. If the function is running after 6:00 pm this working day need to be also excluded.
+{% endblockquote %}</p>
 
 <!-- more -->
 
 
 <p>After some googling I&rsquo;ve found this task could be resolved using rrule module.
 Be sure you have <a href="http://labix.org/python-dateutil">dateutil</a> library installed to use this example.
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>sublime-text</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">time</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">dateutil</span> <span class="kn">import</span> <span class="n">rrule</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">get_working_days</span><span class="p">(</span><span class="n">date_start_obj</span><span class="p">,</span> <span class="n">date_end_obj</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">weekdays</span> <span class="o">=</span> <span class="n">rrule</span><span class="o">.</span><span class="n">rrule</span><span class="p">(</span><span class="n">rrule</span><span class="o">.</span><span class="n">DAILY</span><span class="p">,</span> <span class="n">byweekday</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">dtstart</span><span class="o">=</span><span class="n">date_start_obj</span><span class="p">,</span> <span class="n">until</span><span class="o">=</span><span class="n">date_end_obj</span><span class="p">)</span>
-</span><span class='line'><span class="n">weekdays</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">weekdays</span><span class="p">))</span>
-</span><span class='line'><span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&#39;%H&#39;</span><span class="p">))</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span> <span class="mi">18</span><span class="p">:</span>
-</span><span class='line'>    <span class="n">weekdays</span> <span class="o">-=</span> <span class="mi">1</span>
-</span><span class='line'><span class="k">return</span> <span class="n">weekdays</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+{% codeblock sublime-text lang:python%}
+import time
+from dateutil import rrule</p>
+
+<p>def get_working_days(date_start_obj, date_end_obj):</p>
+
+<pre><code>weekdays = rrule.rrule(rrule.DAILY, byweekday=range(0, 5), dtstart=date_start_obj, until=date_end_obj)
+weekdays = len(list(weekdays))
+if int(time.strftime('%H')) &gt;= 18:
+    weekdays -= 1
+return weekdays
+</code></pre>
+
+<p>{% endcodeblock %}
 Here byweekday parameter is a list of days of week we want to caculate, ti&rsquo;s elements can be integers (Monday is 0, Tuesday is 1 etc) or rrule objects &ndash; rrule.MO, rrule.TU etc. Other usefull methods for date (e.g. full weeks) calculations could be found <a href="http://labix.org/python-dateutil">here</a>.</p>
 
 <p>Suppose we need to calculate days from 1-01-2013 until 28-07-2013.
 Our code will be:
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>sublime-text</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">date_start_obj</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</span><span class='line'><span class="n">date_end_obj</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
-</span><span class='line'><span class="k">print</span> <span class="n">get_working_days</span><span class="p">(</span><span class="n">date_start_obj</span><span class="p">,</span> <span class="n">date_end_obj</span><span class="p">):</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+{% codeblock sublime-text lang:python%}
+from datetime import date</p>
+
+<p>date_start_obj = date(2013, 1, 1)
+date_end_obj = date(2013, 7, 18)
+print get_working_days(date_start_obj, date_end_obj):
+{% endcodeblock %}
 The output will be: <strong>142</strong> (Calculate yourself if don&rsquo;t trust me).</p>
 ]]></content>
   </entry>
