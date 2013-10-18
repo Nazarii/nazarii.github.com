@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python: starting http server in one command"
+title: "Python: starting http server in one line"
 date: 2013-07-28 22:21
 comments: true
 categories: Python
