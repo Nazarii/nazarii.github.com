@@ -4,7 +4,7 @@
   <title><![CDATA[Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-07-28T22:46:51+03:00</updated>
+  <updated>2013-10-18T16:10:51+01:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -14,9 +14,34 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Python: starting http server in one command]]></title>
+    <title type="html"><![CDATA[Moving Virtual Box machine to another computer]]></title>
+    <link href="http://Nazarii.github.io/blog/2013/10/18/moving-virtual-box-machine-to-another-computer/"/>
+    <updated>2013-10-18T15:58:00+01:00</updated>
+    <id>http://Nazarii.github.io/blog/2013/10/18/moving-virtual-box-machine-to-another-computer</id>
+    <content type="html"><![CDATA[<p>From time to time I&rsquo;m using <a href="https://www.virtualbox.org/">VirtualBox</a> to launch Windows machines and here is a simple way of taking existing VM copy and restore it on another instance from command line:<!-- more --></p>
+
+<figure class='code'><figcaption><span>zsh</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>VBoxManage <span class="nb">export</span> &lt;VM name&gt; -o ~/exp.ova
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Copy newly created exp.ova file to another instance and to restore it run:</p>
+
+<figure class='code'><figcaption><span>zsh</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>VBoxManage import ~/exp.ovf
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Python: starting http server in one line]]></title>
     <link href="http://Nazarii.github.io/blog/2013/07/28/python-starting-http-server-in-one-command/"/>
-    <updated>2013-07-28T22:21:00+03:00</updated>
+    <updated>2013-07-28T22:21:00+01:00</updated>
     <id>http://Nazarii.github.io/blog/2013/07/28/python-starting-http-server-in-one-command</id>
     <content type="html"><![CDATA[<p>The idea is taken from it&rsquo;s own post on <a href="http://habrahabr.ru/post/118460/">habrahabr</a>.<!-- more -->
 We need to share 2GB file throw our local network
@@ -35,7 +60,7 @@ and the quickest and simpliest way by advice of our <a href="http://www.linkedin
   <entry>
     <title type="html"><![CDATA[Accessing ftp server with SSL/TLS enabled using python 2.6]]></title>
     <link href="http://Nazarii.github.io/blog/2013/07/11/accessing-ftp-server-with-ssl-slash-tsl-enabled-with-python-2-dot-6/"/>
-    <updated>2013-07-11T22:06:00+03:00</updated>
+    <updated>2013-07-11T22:06:00+01:00</updated>
     <id>http://Nazarii.github.io/blog/2013/07/11/accessing-ftp-server-with-ssl-slash-tsl-enabled-with-python-2-dot-6</id>
     <content type="html"><![CDATA[<p>Just want to provide a solution of problem I&rsquo;ve faced, maybe it will be usefull for someone.
 Issue is next:</p>
@@ -136,7 +161,7 @@ The deal is because of user configuration on remote server, it is set to reguire
   <entry>
     <title type="html"><![CDATA[Calculating working days with python.]]></title>
     <link href="http://Nazarii.github.io/blog/2013/06/29/calculating-working-days-with-python/"/>
-    <updated>2013-06-29T21:15:00+03:00</updated>
+    <updated>2013-06-29T21:15:00+01:00</updated>
     <id>http://Nazarii.github.io/blog/2013/06/29/calculating-working-days-with-python</id>
     <content type="html"><![CDATA[<p>So the specification is following:</p>
 
@@ -197,7 +222,7 @@ Our code will be:</p>
   <entry>
     <title type="html"><![CDATA[Few SSH productivity tips for newbies.]]></title>
     <link href="http://Nazarii.github.io/blog/2013/06/29/basic-ssh-productivity-tips/"/>
-    <updated>2013-06-29T18:22:00+03:00</updated>
+    <updated>2013-06-29T18:22:00+01:00</updated>
     <id>http://Nazarii.github.io/blog/2013/06/29/basic-ssh-productivity-tips</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Secure_Shell">SSH</a> has many features which are helpful when working regularly with files on remote servers, together they can give a vast increase in productivity over the bare use of <a href="http://en.wikipedia.org/wiki/Secure_Shell">ssh</a>. If you regularly use <a href="http://en.wikipedia.org/wiki/Secure_Shell">ssh</a>, it’s worth spending a little time learning about these and configuring your environment to make your life easier.<!-- more -->
 I&rsquo;m working with ssh over a year and here are few tips to make this work easier when connecting to remote server.</p>
@@ -295,7 +320,7 @@ I&rsquo;m working with ssh over a year and here are few tips to make this work e
   <entry>
     <title type="html"><![CDATA[Introducing ZSH.]]></title>
     <link href="http://Nazarii.github.io/blog/2013/06/28/introducing-zsh-and-oh-my-zsh/"/>
-    <updated>2013-06-28T14:28:00+03:00</updated>
+    <updated>2013-06-28T14:28:00+01:00</updated>
     <id>http://Nazarii.github.io/blog/2013/06/28/introducing-zsh-and-oh-my-zsh</id>
     <content type="html"><![CDATA[<p>Today I&rsquo;d like to show you really usefull tool for working in command line I&rsquo;ve discovered &ndash; <a href="http://www.zsh.org/">ZSH</a>.
 The Z Shell (<a href="http://www.zsh.org/">zsh</a>) is a power shell that is not often used by many Linux users. The reason for this is that most Linux distributions install, and make default, the bash shell.<!--more--> zsh is packaged for virtually every Linux distribution and installation on Ubuntu is simple made by running</p>
@@ -371,7 +396,7 @@ To add time of command prompting to the right side of terminal append following 
   <entry>
     <title type="html"><![CDATA[That's it! My first post.]]></title>
     <link href="http://Nazarii.github.io/blog/2013/06/20/thats-it-my-first-post/"/>
-    <updated>2013-06-20T23:25:00+03:00</updated>
+    <updated>2013-06-20T23:25:00+01:00</updated>
     <id>http://Nazarii.github.io/blog/2013/06/20/thats-it-my-first-post</id>
     <content type="html"><![CDATA[<p>So i decided to start my own blog with blackjack and hookers .<!-- more -->
 Will try to write about technical Tips&amp;Tricks that are interesting for me basicly in English (Please accept my apologies for my barbarian grammatic).
