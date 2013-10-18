@@ -4,7 +4,7 @@
   <title><![CDATA[Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-10-18T16:10:51+01:00</updated>
+  <updated>2013-10-18T16:25:44+01:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -14,23 +14,32 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Git: Find out who broke functionality]]></title>
+    <link href="http://Nazarii.github.io/blog/2013/10/18/git-find-out-who-broke-functionality/"/>
+    <updated>2013-10-18T16:15:00+01:00</updated>
+    <id>http://Nazarii.github.io/blog/2013/10/18/git-find-out-who-broke-functionality</id>
+    <content type="html"><![CDATA[<p>Not so far ago I came accross an issue when I noticed that functionality that was worked previously is broken at the moment and is not working (<em>Yes, I know we should use regression testing but at the moment we are implementing it</em>). &mdash;To be continued&mdash;</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Moving Virtual Box machine to another computer]]></title>
     <link href="http://Nazarii.github.io/blog/2013/10/18/moving-virtual-box-machine-to-another-computer/"/>
     <updated>2013-10-18T15:58:00+01:00</updated>
     <id>http://Nazarii.github.io/blog/2013/10/18/moving-virtual-box-machine-to-another-computer</id>
     <content type="html"><![CDATA[<p>From time to time I&rsquo;m using <a href="https://www.virtualbox.org/">VirtualBox</a> to launch Windows machines and here is a simple way of taking existing VM copy and restore it on another instance from command line:<!-- more --></p>
 
-<figure class='code'><figcaption><span>zsh</span></figcaption>
+<figure class='code'><figcaption><span>bash</span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>VBoxManage <span class="nb">export</span> &lt;VM name&gt; -o ~/exp.ova
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>VBoxManage <span class="nb">export</span> &lt;VM name&gt; -o ~/exp.ova
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>Copy newly created exp.ova file to another instance and to restore it run:</p>
 
-<figure class='code'><figcaption><span>zsh</span></figcaption>
+<figure class='code'><figcaption><span>bash</span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>VBoxManage import ~/exp.ovf
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>VBoxManage import ~/exp.ovf
 </span></code></pre></td></tr></table></div></figure>
 
 
