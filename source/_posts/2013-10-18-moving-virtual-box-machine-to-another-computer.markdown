@@ -7,12 +7,12 @@ categories: VirtualBox
 ---
 
 From time to time I'm using [VirtualBox](https://www.virtualbox.org/) to launch Windows machines and here is a simple way of taking existing VM copy and restore it on another instance from command line:<!-- more -->
-{% codeblock zsh lang:bash%}
-VBoxManage export <VM name> -o ~/exp.ova
+{% codeblock bash lang:bash%}
+$ VBoxManage export <VM name> -o ~/exp.ova
 {% endcodeblock %}
 
 Copy newly created exp.ova file to another instance and to restore it run:
-{% codeblock zsh lang:bash%}
-VBoxManage import ~/exp.ovf
+{% codeblock bash lang:bash%}
+$ VBoxManage import ~/exp.ovf
 {% endcodeblock %}
 
