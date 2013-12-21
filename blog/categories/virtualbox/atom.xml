@@ -4,7 +4,7 @@
   <title><![CDATA[Category: VirtualBox | Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/blog/categories/virtualbox/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-10-18T16:25:44+01:00</updated>
+  <updated>2013-12-22T00:36:29+02:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Moving Virtual Box machine to another computer]]></title>
     <link href="http://Nazarii.github.io/blog/2013/10/18/moving-virtual-box-machine-to-another-computer/"/>
-    <updated>2013-10-18T15:58:00+01:00</updated>
+    <updated>2013-10-18T15:58:00+03:00</updated>
     <id>http://Nazarii.github.io/blog/2013/10/18/moving-virtual-box-machine-to-another-computer</id>
     <content type="html"><![CDATA[<p>From time to time I&rsquo;m using <a href="https://www.virtualbox.org/">VirtualBox</a> to launch Windows machines and here is a simple way of taking existing VM copy and restore it on another instance from command line:<!-- more -->
 <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bash</span></figcaption>

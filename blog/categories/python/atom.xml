@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python | Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-10-18T16:25:44+01:00</updated>
+  <updated>2013-12-22T00:36:29+02:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Python: starting http server in one line]]></title>
     <link href="http://Nazarii.github.io/blog/2013/07/28/python-starting-http-server-in-one-command/"/>
-    <updated>2013-07-28T22:21:00+01:00</updated>
+    <updated>2013-07-28T22:21:00+03:00</updated>
     <id>http://Nazarii.github.io/blog/2013/07/28/python-starting-http-server-in-one-command</id>
     <content type="html"><![CDATA[<p>The idea is taken from it&rsquo;s own post on <a href="http://habrahabr.ru/post/118460/">habrahabr</a>.<!-- more -->
 We need to share 2GB file throw our local network
@@ -32,7 +32,7 @@ This will start http server on default 8000 port and after opening you browser o
   <entry>
     <title type="html"><![CDATA[Accessing ftp server with SSL/TLS enabled using python 2.6]]></title>
     <link href="http://Nazarii.github.io/blog/2013/07/11/accessing-ftp-server-with-ssl-slash-tsl-enabled-with-python-2-dot-6/"/>
-    <updated>2013-07-11T22:06:00+01:00</updated>
+    <updated>2013-07-11T22:06:00+03:00</updated>
     <id>http://Nazarii.github.io/blog/2013/07/11/accessing-ftp-server-with-ssl-slash-tsl-enabled-with-python-2-dot-6</id>
     <content type="html"><![CDATA[<p>Just want to provide a solution of problem I&rsquo;ve faced, maybe it will be usefull for someone.
 Issue is next:
@@ -139,7 +139,7 @@ The deal is because of user configuration on remote server, it is set to reguire
   <entry>
     <title type="html"><![CDATA[Calculating working days with python.]]></title>
     <link href="http://Nazarii.github.io/blog/2013/06/29/calculating-working-days-with-python/"/>
-    <updated>2013-06-29T21:15:00+01:00</updated>
+    <updated>2013-06-29T21:15:00+03:00</updated>
     <id>http://Nazarii.github.io/blog/2013/06/29/calculating-working-days-with-python</id>
     <content type="html"><![CDATA[<p>So the specification is following:
 <blockquote><p>We need to calculate number of working days between two dates &ndash; it mean&rsquo;s we need to calculate all days excluding Saturday and Sunday. If the function is running after 6:00 pm this working day need to be also excluded.</p></blockquote></p>

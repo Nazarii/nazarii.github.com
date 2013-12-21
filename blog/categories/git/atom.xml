@@ -4,7 +4,7 @@
   <title><![CDATA[Category: GIT | Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-10-18T16:25:44+01:00</updated>
+  <updated>2013-12-22T00:36:29+02:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Git: Find out who broke functionality]]></title>
     <link href="http://Nazarii.github.io/blog/2013/10/18/git-find-out-who-broke-functionality/"/>
-    <updated>2013-10-18T16:15:00+01:00</updated>
+    <updated>2013-10-18T16:15:00+03:00</updated>
     <id>http://Nazarii.github.io/blog/2013/10/18/git-find-out-who-broke-functionality</id>
     <content type="html"><![CDATA[<p>Not so far ago I came accross an issue when I noticed that functionality that was worked previously is broken at the moment and is not working (<em>Yes, I know we should use regression testing but at the moment we are implementing it</em>). &mdash;To be continued&mdash;</p>
 ]]></content>
@@ -25,7 +25,7 @@
   <entry>
     <title type="html"><![CDATA[Introducing ZSH.]]></title>
     <link href="http://Nazarii.github.io/blog/2013/06/28/introducing-zsh-and-oh-my-zsh/"/>
-    <updated>2013-06-28T14:28:00+01:00</updated>
+    <updated>2013-06-28T14:28:00+03:00</updated>
     <id>http://Nazarii.github.io/blog/2013/06/28/introducing-zsh-and-oh-my-zsh</id>
     <content type="html"><![CDATA[<p>Today I&rsquo;d like to show you really usefull tool for working in command line I&rsquo;ve discovered &ndash; <a href="http://www.zsh.org/">ZSH</a>.
 The Z Shell (<a href="http://www.zsh.org/">zsh</a>) is a power shell that is not often used by many Linux users. The reason for this is that most Linux distributions install, and make default, the bash shell.<!--more--> zsh is packaged for virtually every Linux distribution and installation on Ubuntu is simple made by running</p>

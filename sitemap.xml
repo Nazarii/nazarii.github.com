@@ -2,52 +2,52 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://Nazarii.github.io/blog/2013/06/20/thats-it-my-first-post/</loc>
-        <lastmod>2013-10-18T15:39:20+01:00</lastmod>
+        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/blog/2013/06/28/introducing-zsh-and-oh-my-zsh/</loc>
-        <lastmod>2013-10-18T15:39:20+01:00</lastmod>
+        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/blog/2013/06/29/basic-ssh-productivity-tips/</loc>
-        <lastmod>2013-10-18T15:39:20+01:00</lastmod>
+        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/blog/2013/06/29/calculating-working-days-with-python/</loc>
-        <lastmod>2013-10-18T15:39:20+01:00</lastmod>
+        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://Nazarii.github.io/blog/2013/07/11/accessing-ftp-server-with-ssl-slash-tsl-enabled-with-python-2-dot-6/
         </loc>
-        <lastmod>2013-10-18T15:39:20+01:00</lastmod>
+        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://Nazarii.github.io/blog/2013/07/28/python-starting-http-server-in-one-command/
         </loc>
-        <lastmod>2013-10-18T15:56:44+01:00</lastmod>
+        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://Nazarii.github.io/blog/2013/10/18/moving-virtual-box-machine-to-another-computer/
         </loc>
-        <lastmod>2013-10-18T16:13:52+01:00</lastmod>
+        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/blog/2013/10/18/git-find-out-who-broke-functionality/</loc>
-        <lastmod>2013-10-18T16:25:20+01:00</lastmod>
+        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/contacts/</loc>
-        <lastmod>2013-10-18T15:39:20+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://Nazarii.github.io/blog/archives/</loc>
-        <lastmod>2013-10-18T16:25:20+01:00</lastmod>
+        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/</loc>
-        <lastmod>2013-10-18T16:25:20+01:00</lastmod>
+        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://Nazarii.github.io/blog/archives/</loc>
+        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
     </url>
 </urlset>
