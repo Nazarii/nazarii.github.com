@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tools | Nazarii Gudzovatyi]]></title>
+  <link href="http://Nazarii.github.io/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="http://Nazarii.github.io/"/>
+  <updated>2013-12-29T15:32:59+02:00</updated>
+  <id>http://Nazarii.github.io/</id>
+  <author>
+    <name><![CDATA[Nazarii]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Make SQL query looks nice]]></title>
+    <link href="http://Nazarii.github.io/blog/2013/12/29/make-sql-query-looks-nice/"/>
+    <updated>2013-12-29T15:19:00+02:00</updated>
+    <id>http://Nazarii.github.io/blog/2013/12/29/make-sql-query-looks-nice</id>
+    <content type="html"><![CDATA[<p>Found nice resource for SQL formatting: <a href="http://sqlformat.appspot.com/">http://sqlformat.appspot.com/</a> . Service allows you to get nice SQL output from existing query quickly<!--more-->, so formatting:
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>SQL</span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>select *
+</span><span class='line'>from foo
+</span><span class='line'>join bar on val1 = val2
+</span><span class='line'>where id = 123;</span></code></pre></td></tr></table></div></figure></notextile></div>
+will result in
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>SQL</span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>SELECT *
+</span><span class='line'>FROM foo
+</span><span class='line'>JOIN bar ON val1 = val2
+</span><span class='line'>WHERE id = 123;</span></code></pre></td></tr></table></div></figure></notextile></div>
+which looks nice and more readable, especially when you have long queries.
+Basicly service is demontration of Python library python-sqlparse which is more pleasant. Enjoy it!</p>
+]]></content>
+  </entry>
+  
+</feed>
