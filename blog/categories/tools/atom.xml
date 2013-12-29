@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-12-29T15:32:59+02:00</updated>
+  <updated>2013-12-29T18:09:00+02:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -39,7 +39,7 @@ will result in
 </span><span class='line'>JOIN bar ON val1 = val2
 </span><span class='line'>WHERE id = 123;</span></code></pre></td></tr></table></div></figure></notextile></div>
 which looks nice and more readable, especially when you have long queries.
-Basicly service is demontration of Python library python-sqlparse which is more pleasant. Enjoy it!</p>
+Basicly service is demonstration of Python library python-sqlparse which is more pleasant. Enjoy it!</p>
 ]]></content>
   </entry>
   
