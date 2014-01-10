@@ -3,7 +3,7 @@ layout: post
 title: "Make SQL query looks nice"
 date: 2013-12-29 15:19
 comments: true
-categories: Tools
+categories: [Tools, Sql]
 ---
 Found nice resource for SQL formatting: http://sqlformat.appspot.com/ . Service allows you to get nice SQL output from existing query quickly<!--more-->, so formatting:
 {% codeblock SQL%}
