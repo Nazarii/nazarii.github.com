@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Tools | Nazarii Gudzovatyi]]></title>
-  <link href="http://Nazarii.github.io/blog/categories/tools/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Sql | Nazarii Gudzovatyi]]></title>
+  <link href="http://Nazarii.github.io/blog/categories/sql/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
   <updated>2014-01-10T21:23:53+02:00</updated>
   <id>http://Nazarii.github.io/</id>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Postgres: find the biggest tables]]></title>
+    <link href="http://Nazarii.github.io/blog/2014/01/10/postgres-find-the-biggest-tables/"/>
+    <updated>2014-01-10T21:18:00+02:00</updated>
+    <id>http://Nazarii.github.io/blog/2014/01/10/postgres-find-the-biggest-tables</id>
+    <content type="html"><![CDATA[<p>Usefull query to find 20 biggest tables in your PostgreSQL database:<!--more-->
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>SQL</span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>SELECT nspname || &lsquo;.&rsquo; || relname AS &ldquo;relation&rdquo;,&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>pg_size_pretty(pg_relation_size(C.oid)) AS "size"
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  FROM pg_class C
+</span><span class='line'>  LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace)
+</span><span class='line'>  WHERE nspname NOT IN (&lsquo;pg_catalog&rsquo;, &lsquo;information_schema&rsquo;)
+</span><span class='line'>  ORDER BY pg_relation_size(C.oid) DESC
+</span><span class='line'>  LIMIT 20;</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Make SQL query looks nice]]></title>

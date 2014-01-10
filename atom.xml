@@ -4,7 +4,7 @@
   <title><![CDATA[Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2013-12-29T18:09:00+02:00</updated>
+  <updated>2014-01-10T21:23:53+02:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Postgres: find the biggest tables]]></title>
+    <link href="http://Nazarii.github.io/blog/2014/01/10/postgres-find-the-biggest-tables/"/>
+    <updated>2014-01-10T21:18:00+02:00</updated>
+    <id>http://Nazarii.github.io/blog/2014/01/10/postgres-find-the-biggest-tables</id>
+    <content type="html"><![CDATA[<p>Usefull query to find 20 biggest tables in your PostgreSQL database:<!--more--></p>
+
+<figure class='code'><figcaption><span>SQL</span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>SELECT nspname || '.' || relname AS "relation",
+</span><span class='line'>    pg_size_pretty(pg_relation_size(C.oid)) AS "size"
+</span><span class='line'>  FROM pg_class C
+</span><span class='line'>  LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace)
+</span><span class='line'>  WHERE nspname NOT IN ('pg_catalog', 'information_schema')
+</span><span class='line'>  ORDER BY pg_relation_size(C.oid) DESC
+</span><span class='line'>  LIMIT 20;</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Make SQL query looks nice]]></title>
