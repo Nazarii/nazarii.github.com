@@ -2,66 +2,70 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://Nazarii.github.io/blog/2013/06/20/thats-it-my-first-post/</loc>
-        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
+        <lastmod>2014-10-09T18:42:56+03:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/blog/2013/06/28/introducing-zsh-and-oh-my-zsh/</loc>
-        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
+        <lastmod>2014-10-09T18:42:56+03:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/blog/2013/06/29/basic-ssh-productivity-tips/</loc>
-        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
+        <lastmod>2014-10-09T18:42:56+03:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/blog/2013/06/29/calculating-working-days-with-python/</loc>
-        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
+        <lastmod>2014-10-09T18:42:56+03:00</lastmod>
     </url>
     <url>
         <loc>
             http://Nazarii.github.io/blog/2013/07/11/accessing-ftp-server-with-ssl-slash-tsl-enabled-with-python-2-dot-6/
         </loc>
-        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
+        <lastmod>2014-10-09T18:42:56+03:00</lastmod>
     </url>
     <url>
         <loc>
             http://Nazarii.github.io/blog/2013/07/28/python-starting-http-server-in-one-command/
         </loc>
-        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
+        <lastmod>2014-10-09T18:42:56+03:00</lastmod>
     </url>
     <url>
         <loc>
             http://Nazarii.github.io/blog/2013/10/18/moving-virtual-box-machine-to-another-computer/
         </loc>
-        <lastmod>2013-12-29T15:15:48+02:00</lastmod>
+        <lastmod>2014-10-09T18:42:56+03:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/blog/2013/10/18/git-find-out-who-broke-functionality/</loc>
-        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
+        <lastmod>2014-10-09T18:42:56+03:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/blog/2013/12/29/make-sql-query-looks-nice/</loc>
-        <lastmod>2014-01-10T21:23:10+02:00</lastmod>
+        <lastmod>2014-10-09T18:42:56+03:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/blog/2014/01/10/postgres-find-the-biggest-tables/</loc>
-        <lastmod>2014-01-10T21:23:04+02:00</lastmod>
+        <lastmod>2014-10-09T18:42:56+03:00</lastmod>
     </url>
     <url>
         <loc>
             http://Nazarii.github.io/blog/2014/10/09/proxylocal-share-your-local-web-server-via-internet/
         </loc>
-        <lastmod>2014-10-09T23:47:12+03:00</lastmod>
+        <lastmod>2016-08-15T17:17:52+03:00</lastmod>
     </url>
     <url>
-        <loc>http://Nazarii.github.io/contacts/</loc>
-        <lastmod>2013-10-27T13:04:57+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://Nazarii.github.io/</loc>
-        <lastmod>2014-10-09T23:47:12+03:00</lastmod>
+        <loc>http://Nazarii.github.io/blog/2015/01/26/decorator-basics-in-python/</loc>
+        <lastmod>2016-08-15T17:17:58+03:00</lastmod>
     </url>
     <url>
         <loc>http://Nazarii.github.io/blog/archives/</loc>
-        <lastmod>2014-10-09T23:47:12+03:00</lastmod>
+        <lastmod>2016-08-15T17:17:58+03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://Nazarii.github.io/contacts/</loc>
+        <lastmod>2014-10-09T18:42:56+03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://Nazarii.github.io/</loc>
+        <lastmod>2016-08-15T17:17:58+03:00</lastmod>
     </url>
 </urlset>
