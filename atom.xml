@@ -4,7 +4,7 @@
   <title><![CDATA[Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2016-08-15T17:31:06+03:00</updated>
+  <updated>2016-08-15T18:30:27+03:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -12,6 +12,99 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Interview questions]]></title>
+    <link href="http://Nazarii.github.io/blog/2016/08/15/interview-questions/"/>
+    <updated>2016-08-15T17:44:00+03:00</updated>
+    <id>http://Nazarii.github.io/blog/2016/08/15/interview-questions</id>
+    <content type="html"><![CDATA[<p>Going to the technical interview is always a big challenge and great experience for me (I should mention, I&rsquo;ve been at &lt; 5 interviews for all of my life). Here I&rsquo;m posting Interview questions, I&rsquo;ve been asked at these meetings. I&rsquo;ve been noticing unique question&rsquo;s after each interview and I wrote them down to my Evernote so I could methodize and teach them in the future. I will update this list, once I&rsquo;ve been asking for new ones.<!-- more --></p>
+
+<p><strong>Python</strong></p>
+
+<ul>
+<li>Abstract class</li>
+<li>Metaclass</li>
+<li>old-style classes vs new classes</li>
+<li>Decorators, usage, @staticmethod, @classmethod</li>
+<li>List comprehensions &amp; generators, differences</li>
+<li>Context managers</li>
+<li>Multithreading (Mutex/Semaphore/Lock/RLock)</li>
+<li>Sockets</li>
+<li>Http methods</li>
+<li>Setuptools</li>
+<li>Magic methods: When is def <strong>call</strong>() used?</li>
+<li><strong>new</strong>() method? Why is it for? When called? Difference to <strong>init</strong>().</li>
+<li><strong>slots</strong>: why for and when used;</li>
+<li>frozenset</li>
+<li>global local</li>
+<li>Http methods (When POST and GET are used?)</li>
+<li>REST</li>
+<li>JSON</li>
+<li>Python &ndash; serialisation (pickle)</li>
+<li>Methods overloading</li>
+<li>How to see all inheritance order (<strong>mro</strong>)</li>
+<li>x = A(); type(a); isinstance(x, A)</li>
+<li>def test(self, l=[]): print l</li>
+<li>OrderedDict</li>
+<li>Introspection (inspect, dir())</li>
+<li>Debugging/Profiling (pdb, cProfile)</li>
+<li>Write regexp to find all floats in string</li>
+</ul>
+
+
+<p><strong>Unix &amp; Networking</strong></p>
+
+<ul>
+<li>How to find the file?</li>
+<li>How to search in the file?</li>
+<li>Get dynamic output from the file.</li>
+<li>Kill all python processes</li>
+<li>Kill vs kill -9</li>
+<li>Sigterm, signals</li>
+<li>pop3 vs IMAP</li>
+<li>What is IP?</li>
+<li>Http protocol</li>
+<li>TCP vs HTTPS</li>
+<li>UDP vs TCP</li>
+<li>How does SSL works</li>
+<li>Apache vs nginx; configuration</li>
+<li>REST</li>
+<li>Bash scripting</li>
+<li>Creating unix service/daemon</li>
+</ul>
+
+
+<p><strong>DB</strong></p>
+
+<ul>
+<li>Normalisation</li>
+<li>ACID</li>
+<li>Primary key/Foreign key/ Indexes</li>
+<li>Subquery vs Join speed</li>
+<li>SQL Search algorithm: get 499 element from 1000</li>
+<li>Inner, Outer, Left, Right Joins</li>
+<li>SQL many2many relationship</li>
+<li>SQL Group by vs HAVING</li>
+<li>What does &lsquo;No SQL&rsquo; mean? Why do is it different from relational DB?</li>
+</ul>
+
+
+<p><strong>GENERAL</strong></p>
+
+<ul>
+<li>OOP principles, examples.</li>
+<li>Design patterns</li>
+<li>SOLID</li>
+<li>What is &lsquo;prototype&rsquo; in JS?</li>
+<li>Hash table</li>
+<li>Continuous integration</li>
+<li>Functional &amp; Non-functional requirements</li>
+<li>Agile principles</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Understanding Decorator's in Python]]></title>
