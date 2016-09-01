@@ -49,6 +49,8 @@ Going to the technical interview is always a big challenge and great experience 
 - pop3 vs IMAP
 - What is IP?
 - Http protocol
+- What is HEAD http request for?
+- Client want's to use only GET requests in his REST-API, will you agree? What will you advice?
 - TCP vs HTTPS
 - UDP vs TCP
 - How does SSL works
@@ -56,6 +58,7 @@ Going to the technical interview is always a big challenge and great experience 
 - REST
 - Bash scripting
 - Creating unix service/daemon
+- Process vs Thread: differences
 
 **DB**
 
@@ -68,6 +71,7 @@ Going to the technical interview is always a big challenge and great experience 
 - SQL many2many relationship
 - SQL Group by vs HAVING
 - What does 'No SQL' mean? Why do is it different from relational DB?
+- NoSQL vs SQL: use cases, differences.
 
 **GENERAL**
 
@@ -79,3 +83,6 @@ Going to the technical interview is always a big challenge and great experience 
 - Continuous integration
 - Functional & Non-functional requirements
 - Agile principles
+- Estimation process: How does it look?
+- What is MVC? Why do we need to separate View from business logic?
+- GIL - what is it? How doee it work's?
