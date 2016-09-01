@@ -4,7 +4,7 @@
   <title><![CDATA[Nazarii Gudzovatyi]]></title>
   <link href="http://Nazarii.github.io/atom.xml" rel="self"/>
   <link href="http://Nazarii.github.io/"/>
-  <updated>2016-08-15T18:30:27+03:00</updated>
+  <updated>2016-09-01T13:17:22+03:00</updated>
   <id>http://Nazarii.github.io/</id>
   <author>
     <name><![CDATA[Nazarii]]></name>
@@ -65,6 +65,8 @@
 <li>pop3 vs IMAP</li>
 <li>What is IP?</li>
 <li>Http protocol</li>
+<li>What is HEAD http request for?</li>
+<li>Client want&rsquo;s to use only GET requests in his REST-API, will you agree? What will you advice?</li>
 <li>TCP vs HTTPS</li>
 <li>UDP vs TCP</li>
 <li>How does SSL works</li>
@@ -72,6 +74,7 @@
 <li>REST</li>
 <li>Bash scripting</li>
 <li>Creating unix service/daemon</li>
+<li>Process vs Thread: differences</li>
 </ul>
 
 
@@ -87,6 +90,7 @@
 <li>SQL many2many relationship</li>
 <li>SQL Group by vs HAVING</li>
 <li>What does &lsquo;No SQL&rsquo; mean? Why do is it different from relational DB?</li>
+<li>NoSQL vs SQL: use cases, differences.</li>
 </ul>
 
 
@@ -101,6 +105,9 @@
 <li>Continuous integration</li>
 <li>Functional &amp; Non-functional requirements</li>
 <li>Agile principles</li>
+<li>Estimation process: How does it look?</li>
+<li>What is MVC? Why do we need to separate View from business logic?</li>
+<li>GIL &ndash; what is it? How doee it work&rsquo;s?</li>
 </ul>
 
 ]]></content>
